@@ -1,13 +1,10 @@
 # Duke Computing Cluster Manager (MCP Server)
 
-An **MCP-powered application** to facilitate **remote management** of the  
-**Duke Computing Cluster (DCC)** via SSH.  
+An **MCP-powered application** to facilitate **remote management** of the **Duke Computing Cluster (DCC)** via SSH.  
 
 Built with:
 - **Remote Execution:** [`paramiko`](https://www.paramiko.org/)  
 - **Orchestration:** [FastMCP](https://github.com/modelcontextprotocol/servers)  
-- **Validation:** [Pydantic](https://docs.pydantic.dev/)  
-
 ---
 
 ## 🚀 Features
@@ -54,39 +51,32 @@ You can create a conda environment from the provided `environment.yml` file to e
 
 **Create the environment:**
 
+```bash
 conda env create -f environment.yml
+```
+
 Activate the environment:
 
-bash
-Copy code
+```bash
 conda activate dcc-mcp
+```
 (Replace dcc-mcp with the environment name defined in environment.yml if different.)
 
 Verify installation:
 
-bash
-Copy code
+```bash
 conda list
+```
 ▶️ Running the MCP Server
 Start the MCP server:
-
-bash
-Copy code
+ ```bash
 python dcc_manager.py
 This launches the FastMCP server and exposes the cluster management tools.
+```
 
 ⚠️ Notes
 Ensure your SSH key is registered with the DCC and the path matches your config.
 
-The script currently expects a private key passphrase ("Grill" placeholder) – change this for your setup.
+The script currently expects a private key passphrase – change this for your setup.
 
 Always call disconnect after work to close sessions cleanly.
-
-🛠️ Tech Stack
-FastMCP – MCP tool orchestration
-
-Paramiko – SSH + SFTP
-
-Pydantic – parameter validation
-
-Python Standard Library – asyncio, pathlib, datetime, etc.
