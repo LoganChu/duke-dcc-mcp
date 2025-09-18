@@ -74,7 +74,7 @@ python dcc_manager.py
 This launches the FastMCP server and exposes the cluster management tools.
 ```
 
-⚠️ Notes
+## ⚠️ Notes
 Ensure your SSH key is registered with the DCC and the path matches your config.
 
 The script currently expects a private key passphrase – change this for your setup.
