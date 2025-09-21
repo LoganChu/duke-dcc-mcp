@@ -80,3 +80,17 @@ Ensure your SSH key is registered with the DCC and the path matches your config.
 The script currently expects a private key passphrase – change this for your setup.
 
 Always call disconnect after work to close sessions cleanly.
+
+
+## 🧩 LLM Integrations
+The easiest way to use MCP servers with LLMs currently is through Claude Desktop. You just need to navigate to the claude_desktop_config.json and put something like this
+```json
+  {
+   "duke-dcc-connector": {
+      "command": "python",
+      "args": [
+        "path-to-mcp-server"
+      ]
+    }
+  }
+ ``` 
