@@ -83,7 +83,7 @@ Always call disconnect after work to close sessions cleanly.
 
 
 ## 🧩 LLM Integrations
-The easiest way to use MCP servers with LLMs currently is through Claude Desktop. You just need to navigate to the claude_desktop_config.json and put something like this
+The easiest LLM Agent to integrate with is Claude Desktop. Edit the claude_desktop_config.json to look something like this: 
 ```json
   {
    "duke-dcc-connector": {
