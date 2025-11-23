@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/s-lch/OneDrive%20-%20Duke%20University/PersonalProjects/duke-dcc-mcp/mlruns/0/models/m-77c35e81acc14973a98ba040799613a7/artifacts
+creation_timestamp: 1763835604605
+experiment_id: '0'
+last_updated_timestamp: 1763835628799
+model_id: m-77c35e81acc14973a98ba040799613a7
+model_type: null
+name: rf_model
+source_run_id: cc0e2edb204e467aa78fd53b828f75c0
+status: 2
+status_message: null
