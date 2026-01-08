@@ -1,0 +1,15 @@
+#Enforces total resource usage across the entire namespace.
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+name: rq-user
+namespace: user-<USERNAME>
+spec:
+hard:
+pods: "5"
+requests.cpu: "1"
+requests.memory: 2Gi
+limits.cpu: "2"
+limits.memory: 4Gi
+persistentvolumeclaims: "2"
