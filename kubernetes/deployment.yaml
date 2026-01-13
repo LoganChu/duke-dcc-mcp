@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: chat-<USERNAME>
+namespace: user-<USERNAME>
+spec:
+replicas: 1
+selector:
+matchLabels:
+app: chat
+template:
+metadata:
+labels:
+app: chat
+spec:
+serviceAccountName: user-sa
+containers:
+- name: chat
+image: <IMAGE>
+ports:
+- containerPort: 8080
+env:
+- name: USERNAME
+value: "<USERNAME>"
+volumeMounts:
+- mountPath: /data
+name: chat-storage
+resources:
+requests:
+cpu: "250m"
+memory: "256Mi"
+limits:
+cpu: "1"
+memory: "1Gi"
+volumes:
+- name: chat-storage
+persistentVolumeClaim:
+claimName: chat-history
+nodeSelector:
+nodepool: login-sim
